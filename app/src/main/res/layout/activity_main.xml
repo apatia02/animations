@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:text="first"
+        android:id="@+id/btnFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/firstAnim"
+        app:layout_constraintStart_toEndOf="@+id/firstAnim"
+        app:layout_constraintTop_toTopOf="@+id/firstAnim" />
+    <Button
+        android:text="second"
+        android:id="@+id/btnSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/firstAnim"
+        app:layout_constraintStart_toEndOf="@+id/secondAnim"
+        app:layout_constraintTop_toTopOf="@+id/firstAnim" />
+
+    <Button
+        android:text="third"
+        android:id="@+id/btnThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/firstAnim"
+        app:layout_constraintStart_toEndOf="@+id/thirdAnim"
+        app:layout_constraintTop_toTopOf="@+id/firstAnim" />
+
+    <LinearLayout
+        android:id="@+id/firstAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/secondAnim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/first1"
+            android:src="@drawable/symbol02"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <ImageView
+            android:src="@drawable/symbol02"
+            android:id="@+id/first2"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <ImageView
+            android:id="@+id/first3"
+            android:src="@drawable/symbol03"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/thirdAnim"
+        app:layout_constraintStart_toEndOf="@+id/firstAnim"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/second1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/symbol03"
+       />
+
+        <ImageView
+            android:src="@drawable/symbol03"
+            android:id="@+id/second2"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:src="@drawable/symbol03"
+            android:id="@+id/second3"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/secondAnim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:src="@drawable/symbol03"
+            android:id="@+id/third1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <ImageView
+            android:src="@drawable/symbol03"
+            android:id="@+id/third2"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:src="@drawable/symbol03"
+            android:id="@+id/third3"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
